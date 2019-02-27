@@ -1,5 +1,6 @@
 function pomodoroTimer(a) {
     var update = document.getElementById("timer-show");
+    var initialTime = a;
     var remainingTime = a;
     var increment = 1;
     var counter = 0;

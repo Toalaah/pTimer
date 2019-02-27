@@ -50,7 +50,7 @@ td {
 }
 
 
-table, #factor {
+table {
 	margin: auto auto auto auto;
 	font-size: 15px;
 	font-family: 'IBM Plex Mono', monospace;
@@ -73,79 +73,70 @@ table, #factor {
 	color: #4388f9;
 }
 
-#demo {
-	font-family: 'IBM Plex Mono', monospace;
-}
 
-#input_area {
-	padding-top: 15px;
-	text-align: center;
-}
-
-#input_message {
-	height: 20px;
-	width: 400px;
-	font-family: 'IBM Plex Mono', monospace;
-	border-radius: 6px;
-	border: solid black 1px;
-	box-shadow: 5px 5px 25px #888888;
-}
-
-#btnSub {
-	height: 20px;
-	font-family: 'IBM Plex Mono', monospace;
-	background-color: #EEE;
-	border-radius: 6px;
-	border: solid black 1px;
-}
-
-#construct {
-	user-drag: none; 
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	width: 100%;
-	z-index: 0;
-	margin-top: 15%;
-}
-
-#picture-block {
-	position: relative;
-}
-
-#picture-block:after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 99;
-}
-
-#splash {
-	margin: 0;
+.btns {
+  border: 1px solid black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  height: 26px;
+  border-radius: 6px;
 }
 
 
-#output_area {
-	text-align: center;
+#resume {
+  font-size: 15px;
+  background-color: #abedaa;
 }
 
-#output-box {
-	resize: none;
-	height: 50px;
-	width: 400px;
-	font-family: 'IBM Plex Mono', monospace;
-	border-radius: 6px;
-	border: solid black 1px;
-	box-shadow: 5px 5px 25px #888888;
+#pause {
+  font-size: 15px;
+  background-color: #f9d484;
 }
 
-#slider {
-	width: 235px;
-	background: #EEE;
-	border-radius: 6px;
+#reset {
+  font-size: 15px;
+  background-color: #f98e8e;
+}
+
+#controls, #btn-study, #btn-break{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#btn-break {
+  margin-top: 5px;
+}
+
+#custom {
+  font-size: 15px;
+  border-radius:6px;
+  width: 50px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border: 1px solid black;
+}
+
+#study25, #studyCustom, #break5, #break10 {
+  font-size: 15px;
+}
+
+
+#timer-show {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 48px;
+  color: black;
+}
+
+
+#timer {
+  width: 25%;
+  /*float: right;*/
+  min-width: 350px;
+  box-shadow: 10px 10px 31px -6px rgba(0,0,0,0.75);
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 15px;
+  padding-top: 10px;
 }
