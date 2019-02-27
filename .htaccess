@@ -1,5 +1,5 @@
 #Alternate default index page
-DirectoryIndex encode.html
+DirectoryIndex timer.html
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
