@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>P-Timer</title>
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="stylesheet" type="text/css" href="css.css">
+      <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700" rel="stylesheet">
+      <script type="text/javascript" src="Timer.js"></script>
+   </head>
+   <body>
+      <div id="header">
+         <div id="title">P-Timer</div>
+         <div id="subtitle">A simple productivity tool.</div>
+      </div>
+      <center>
+         <div id="info">
+            <div id="info-title">How does it work?</div>
+            <table>
+               <tr>
+                  <td> This encoder works by taking an input message and shifting each letter by a given amount down the alphabet, finally outputting the encrypted message in the output-box below.</td>
+               </tr>
+              
+               <tr>
+                  <td id="info-credits">
+                     <center>Read more on encryption <a id="info-credits-link" href="https://en.wikipedia.org/wiki/Pomodoro_Technique">here</a></center>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </center>
+      <br />
+      <center>
+        <div id="timer">
+            <p id="timer-show"></p>
+            <div id="controls">
+                <button class="btns" id="resume">Resume</button>
+                <button class="btns" id="pause">Pause</button>
+                <button class="btns" id="reset">Reset</button>
+            </div>
+            <div id="btn-study">
+                <button class="btns" id="study25" onClick="pomodoroTimer(1500)">25 min study</button>
+                <button class="btns" id="studyCustom" onClick="pomodoroTimer(custom())">Custom</button>
+                <input type="number" value="45" id="custom"></input>
+            </div>
+            <div id="btn-break">
+                <button class="btns" id="break10" onClick="pomodoroTimer(600)">10 min break</button>
+                <button class="btns" id="break5" onClick="pomodoroTimer(300)">5 min break</button>
+            </div>
+        </div>
+    </center>
+      <div id="credits">
+         <p>Made by <a id="link" href="https://www.twitter.com/toalaah">Samuel Kunst</a> | <a id="link" href="https://github.com/Toalaah/P-Timer">Github Source</a></p>
+      </div>
+   </body>
+</html>

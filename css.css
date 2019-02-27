@@ -1,0 +1,151 @@
+#header {
+	margin-top: 25px;
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+}
+
+#info-credits {
+	text-align: center;
+	font-size: 9px;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+#info-credits-link {
+	text-decoration: none;
+	color: #4388f9;
+	text-align: center;
+	font-size: 9px;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+td {
+	padding-top: 5px; 
+}
+
+#info {
+	margin-top: 15px;	
+	background-color: #EEE;
+	display: inline-block;
+	border-radius: 8px;
+	border: solid black 1px;
+	padding: 10px;
+	max-width: 550px;
+	box-shadow: 5px 5px 25px #888888;
+}
+
+#title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#subtitle {
+	font-size: 1em;
+	font-weight: italic;
+}
+
+#info-title {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Major Mono Display', monospace;
+}
+
+
+table, #factor {
+	margin: auto auto auto auto;
+	font-size: 15px;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+#credits {
+	position: fixed;
+	bottom: 10px;
+	text-align: center;
+	font-size: 0.5em;
+	font-family: 'IBM Plex Mono', monospace;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0px;
+	right: 0px;
+}
+
+#link {
+	text-decoration: none;
+	color: #4388f9;
+}
+
+#demo {
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+#input_area {
+	padding-top: 15px;
+	text-align: center;
+}
+
+#input_message {
+	height: 20px;
+	width: 400px;
+	font-family: 'IBM Plex Mono', monospace;
+	border-radius: 6px;
+	border: solid black 1px;
+	box-shadow: 5px 5px 25px #888888;
+}
+
+#btnSub {
+	height: 20px;
+	font-family: 'IBM Plex Mono', monospace;
+	background-color: #EEE;
+	border-radius: 6px;
+	border: solid black 1px;
+}
+
+#construct {
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	width: 100%;
+	z-index: 0;
+	margin-top: 15%;
+}
+
+#picture-block {
+	position: relative;
+}
+
+#picture-block:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+}
+
+#splash {
+	margin: 0;
+}
+
+
+#output_area {
+	text-align: center;
+}
+
+#output-box {
+	resize: none;
+	height: 50px;
+	width: 400px;
+	font-family: 'IBM Plex Mono', monospace;
+	border-radius: 6px;
+	border: solid black 1px;
+	box-shadow: 5px 5px 25px #888888;
+}
+
+#slider {
+	width: 235px;
+	background: #EEE;
+	border-radius: 6px;
+}
