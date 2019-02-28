@@ -76,7 +76,7 @@ table {
 
 .btns {
   border: 1px solid black;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   height: 26px;
   border-radius: 6px;
 }
@@ -111,7 +111,7 @@ table {
   border-radius:6px;
   width: 50px;
   text-align: center;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   border: 1px solid black;
 }
 
@@ -121,7 +121,7 @@ table {
 
 
 #timer-show {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 48px;
   color: black;
 }
