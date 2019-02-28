@@ -1,4 +1,5 @@
 function pomodoroTimer(a) {
+	document.querySelector("link[rel*='icon']").href = "favicon1-32x32.png";
     var remainingTime = a;
     var newOne = 0
     var increment = 1;
@@ -41,6 +42,7 @@ function pomodoroTimer(a) {
         if(counter == remainingTime) {
             timerStop();
             ding.play();
+            document.querySelector("link[rel*='icon']").href = "favicon-32x32.png";
         }
     }
 }

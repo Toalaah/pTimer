@@ -20,6 +20,25 @@
         <div id="subtitle">A simple focus / productivity widget.</div>
     </div>
     <center>
+
+        <div id="timer">
+            <p id="timer-show"></p>
+            <div id="controls">
+                <button class="btns" id="resume">Resume</button>
+                <button class="btns" id="pause">Pause</button>
+                <button class="btns" id="reset">Reset</button>
+            </div>
+            <div id="btn-study">
+                <button class="btns" id="study25" onClick="pomodoroTimer(1500)">25 min study</button>
+                <button class="btns" id="studyCustom" onClick="pomodoroTimer(custom())">Custom</button>
+                <input type="number" value="45" id="custom"></input>
+            </div>
+            <div id="btn-break">
+                <button class="btns" id="break10" onClick="pomodoroTimer(600)">10 min break</button>
+                <button class="btns" id="break5" onClick="pomodoroTimer(300)">5 min break</button>
+            </div>
+        </div>
+    <br />
         <div id="info">
             <div id="info-title">How does it work?</div>
             <table>
@@ -41,26 +60,6 @@
                     </td>
                 </tr>
             </table>
-        </div>
-    </center>
-    <br />
-    <center>
-        <div id="timer">
-            <p id="timer-show"></p>
-            <div id="controls">
-                <button class="btns" id="resume">Resume</button>
-                <button class="btns" id="pause">Pause</button>
-                <button class="btns" id="reset">Reset</button>
-            </div>
-            <div id="btn-study">
-                <button class="btns" id="study25" onClick="pomodoroTimer(1500)">25 min study</button>
-                <button class="btns" id="studyCustom" onClick="pomodoroTimer(custom())">Custom</button>
-                <input type="number" value="45" id="custom"></input>
-            </div>
-            <div id="btn-break">
-                <button class="btns" id="break10" onClick="pomodoroTimer(600)">10 min break</button>
-                <button class="btns" id="break5" onClick="pomodoroTimer(300)">5 min break</button>
-            </div>
         </div>
     </center>
     <div id="credits">
