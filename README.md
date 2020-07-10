@@ -1,7 +1,6 @@
-<a href="https://toalaah.github.io/timer.html">pTIMER</a>
+#H1 pTimer
 
-This web-app was made primarily through javascript and is most likely quite sloppy. It still works though so I don't really care.
+pTimer is a generic pomodoro timer used primarily for studying more productively. This web-app was made primarily through javascript and is most likely quite sloppy. It still works though so I don't really care.
 
-<a href="https://toalaah.github.io/test.html">TEST</a>
+[Link](https://toalaah.github.io/)
 
-Contact: https://www.twitter.com/toalaah
