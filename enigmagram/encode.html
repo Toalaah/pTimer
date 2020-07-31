@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Enigmagram</title>
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="stylesheet" type="text/css" href="css.css">
+      <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700" rel="stylesheet">
+   </head>
+   <body>
+      <div id="header">
+         <div id="title">Enigmagram</div>
+         <div id="subtitle">A simple message-encoding tool.</div>
+      </div>
+      <center>
+         <div id="info">
+            <div id="info-title">How does it work?</div>
+            <table>
+               <tr>
+                  <td> This encoder works by taking an input message and shifting each letter by a given amount down the alphabet, finally outputting the encrypted message in the output-box below.</td>
+               </tr>
+               <br />
+               <tr>
+                  <td><b>1.</b> Enter the message you wish to encode into the box below.</td>
+               </tr>
+               <tr>
+                  <td><b>2.</b> Adjust the slider according to how many letters you want your input to be shifted by. For example, the message <b>"Test"</b> with a slider-value of 2 will output <b>"Vguv"</b>, i.e every letter is shifted to the right by two letters. Overflow letter will restart from the begining of the alphabet, for example <b>"XYZ"</b> with a shift-factor of 2 will output <b>"ZAB"</b>.</td>
+               </tr>
+               <tr>
+                  <td><b>3.</b> Press the convert button. The encrypted message will appear in the box below. You can also decypher previously encoded messages by clicking on 'decypher' rather than 'encrypt'.</td>
+               </tr>
+               <tr>
+                  <td id="info-credits">
+                     <center>Read more on encryption <a id="info-credits-link" href="https://en.wikipedia.org/wiki/Encryption">here</a></center>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </center>
+      <br />
+      <div id="input_area">
+         <input type="text" autocomplete="off" id="input_message" placeholder="Enter the message that you'd like to encrypt / decypher."></input>
+         <input id="btnSub" type="submit" value="Encrypt" onclick="encrypt()"></input>
+         <input id="btnSub" type="submit" value="Decypher" onclick="decypher()"></input>
+         <div id="slidecontainer">
+            <input type="range" min="0" max="26" value="2" id="slider">
+         </div>
+         <p id="factor">Shift-factor:
+            <span id="position"></span>
+         </p>
+      </div>
+      <br />
+      <script type="text/javascript">
+         var slider = document.getElementById("slider");
+         var output = document.getElementById("position");
+         output.innerHTML = slider.value; 
+         slider.oninput = function() {
+         output.innerHTML = this.value;
+         }
+      </script>
+      <div id="output_area">
+         <textarea id="output-box" autocomplete="off" placeholder="Your encrypted / decyphered message will appear here."></textarea>
+         <br /> 
+         <input type="submit" id="btnSub" value="Copy message to clipboard." onclick="copy()"></input>
+      </div>
+      <script type="text/javascript">
+         alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+         Capalphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+         symbols = [" ", ".", ",","?","!","'","/"];
+         function encrypt() {
+            var slider = document.getElementById("slider"); 
+            var shift = +slider.value;
+            var user_input = String(document.getElementById("input_message").value);
+            stringArray = []
+            outputArray = []
+            for (var j=0; j < user_input.length; j++){
+               stringArray.push(user_input.charAt(j));
+            }
+            for(var k=0; k<stringArray.length; k++){
+               for (var i=0; i < 26; i++) {
+                  if(alphabet[i] === stringArray[k]) {
+                     outputArray.push(alphabet[i+shift]);
+                  }
+                  if(Capalphabet[i] === stringArray[k]) {
+                     outputArray.push(Capalphabet[i+shift]);
+                     }
+                  else {
+                     for (var p=0; p<symbols.length; p++){
+                  if(stringArray[k] === symbols[p]){
+                     outputArray.push(symbols[p]);
+                     i = 26;
+                     p=symbols.length;
+                  }
+                  }
+               }
+                  }
+               }
+            document.getElementById("output-box").innerHTML = outputArray.join('');
+         }
+         function decypher() {
+            var slider = document.getElementById("slider"); 
+            var shift = +slider.value;
+            var user_input = String(document.getElementById("input_message").value);
+            stringArray = []
+            outputArray = []
+            for (var j=0; j < user_input.length; j++){
+               stringArray.push(user_input.charAt(j));
+            }
+            for(var k=0; k<stringArray.length; k++){
+               for (var i=25; i < 52; i++) {
+                  if(alphabet[i] === stringArray[k]) {
+                     outputArray.push(alphabet[i-shift]);
+                  }
+                  if(Capalphabet[i] === stringArray[k]) {
+                     outputArray.push(Capalphabet[i-shift]);
+                     }
+                  else {
+                     for (var p=0; p<symbols.length; p++){
+                  if(stringArray[k] === symbols[p]){
+                     outputArray.push(symbols[p]);
+                     i = 52;
+                     p=symbols.length;
+                  }
+                  }
+               }
+                  }
+               }
+            document.getElementById("output-box").innerHTML = outputArray.join('');
+         }         
+      </script>
+      <script type="text/javascript">
+         function copy() {
+            let textarea = document.getElementById("output-box");
+            textarea.select();
+            document.execCommand("copy");
+         }
+      </script>
+      <div id="credits">
+         <p>Made by <a id="link" href="https://www.twitter.com/toalaah">Samuel Kunst</a> | <a id="link" href="https://github.com/Toalaah/Enigmagram">Github Source</a></p>
+      </div>
+   </body>
+</html>
